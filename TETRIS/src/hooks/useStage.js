@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 import { createStage } from "../gameHelper";
 
 export const useStage = (player, resetPlayer) => {
@@ -23,13 +22,16 @@ export const useStage = (player, resetPlayer) => {
           }
         });
       });
-      // Then check if we got some score if collided
+      // Then check if we collided
+      if (player.collided) {
+        resetPlayer();
+      }
+
       return newStage;
     };
 
-    // Here are the updates
     setStage((prev) => updateStage(prev));
-  }, [player]);
+  }, [player, resetPlayer]);
 
   return [stage, setStage];
 };
