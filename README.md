@@ -41,4 +41,5 @@ Some potential improvements for React Tetris include:
 React Tetris is a fun and challenging game that provides a great gaming experience for fans of the classic Tetris game. It was developed using ReactJS and other web technologies and is fully functional and ready to play.
 
 ## Interfaces 
-soon
+<img width="1191" alt="Screen Shot 2023-02-23 at 3 09 41 PM" src="https://user-images.githubusercontent.com/63207127/220931488-79e03e92-d669-41be-acbc-1e1adc2d95ff.png">
+
