@@ -1,9 +1,12 @@
 import React from "react";
-import { TETROMINOS } from "../tetrominos";
 import { StyledCell } from "./Styles/StyledCell";
+import { TETROMINOS } from "../tetrominos";
 
-const Cell = ({ type }) => {
-  return <StyledCell type={type} color={TETROMINOS[type].color}></StyledCell>;
-};
+// React.memo makes sure we only re-render the changed cells
+const Cell = ({ type }) => (
+  <StyledCell type={type} color={TETROMINOS[type].color}>
+    {console.log("rerender cell")}
+  </StyledCell>
+);
 
-export default Cell;
+export default React.memo(Cell);
